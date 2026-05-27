@@ -1,6 +1,6 @@
 //
 //  PaywallView.swift
-//  Світ Казок
+//  Storyland
 //
 
 import SwiftUI
@@ -72,10 +72,10 @@ struct PaywallView: View {
         .onChange(of: store.isPremium) { _, newValue in
             if newValue { dismiss() }
         }
-        .alert("Щось пішло не так", isPresented: $showErrorAlert) {
+        .alert("Something went wrong", isPresented: $showErrorAlert) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text(store.lastError ?? "Спробуй ще раз пізніше.")
+            Text(store.lastError ?? "Please try again later.")
         }
     }
 
@@ -92,7 +92,7 @@ struct PaywallView: View {
                     .background(.ultraThinMaterial, in: Circle())
                     .overlay(Circle().stroke(Color.white.opacity(0.4), lineWidth: 1))
             }
-            .accessibilityLabel(Text("Закрити"))
+            .accessibilityLabel(Text("Close"))
             Spacer()
         }
         .frame(height: 44)
@@ -122,14 +122,14 @@ struct PaywallView: View {
 
     private var titleBlock: some View {
         VStack(spacing: isCompact ? 6 : 10) {
-            Text("Розблокуй усі казки")
+            Text("Unlock all tales")
                 // Shrink title typography layout dynamically
                 .font(.system(size: isCompact ? 24 : 30, weight: .heavy, design: .rounded))
                 .foregroundStyle(.white)
                 .multilineTextAlignment(.center)
                 .shadow(color: .black.opacity(0.35), radius: 8, y: 3)
 
-            Text("Одноразова покупка. Доступ назавжди.")
+            Text("One-time purchase. Forever access.")
                 .font(isCompact ? .footnote : .appSubtitle)
                 .foregroundStyle(.white.opacity(0.95))
                 .multilineTextAlignment(.center)
@@ -141,10 +141,10 @@ struct PaywallView: View {
 
     private var benefitsList: some View {
         VStack(spacing: isCompact ? 8 : 12) { // Pack items tighter on iPhone
-            benefitRow(icon: "books.vertical.fill", title: "320 казок", subtitle: "Повна колекція коротких історій.")
-            benefitRow(icon: "speaker.wave.2.fill", title: "Записи диктора", subtitle: "Усі звукові записи.")
-            benefitRow(icon: "questionmark.circle.fill", title: "Питання та вікторини", subtitle: "Перевір розуміння після кожної казки.")
-            benefitRow(icon: "infinity", title: "Доступ назавжди", subtitle: "Одна покупка, без підписок.")
+            benefitRow(icon: "books.vertical.fill", title: "320 tales", subtitle: "Full collection of short stories.")
+            benefitRow(icon: "speaker.wave.2.fill", title: "Narrator audio", subtitle: "All audio recordings.")
+            benefitRow(icon: "questionmark.circle.fill", title: "Questions and quizzes", subtitle: "Check comprehension after every tale.")
+            benefitRow(icon: "infinity", title: "Forever access", subtitle: "One purchase, no subscriptions.")
         }
         .opacity(appeared ? 1.0 : 0)
         .offset(y: appeared ? 0 : 30)
@@ -221,19 +221,19 @@ struct PaywallView: View {
 
     private var purchaseButtonTitle: String {
         if store.isLoadingProducts {
-            return "Завантаження..."
+            return "Loading..."
         }
         if let product = store.premiumProduct {
-            return "Купити за \(product.displayPrice)"
+            return "Buy for \(product.displayPrice)"
         }
-        return "Продукт недоступний"
+        return "Product unavailable"
     }
 
     private var restoreButton: some View {
         Button {
             Task { await handleRestore() }
         } label: {
-            Text("Відновити покупку")
+            Text("Restore purchase")
                 .font(.system(size: isCompact ? 11 : 12, weight: .bold, design: .rounded))
                 .foregroundStyle(.white)
                 .padding(.vertical, isCompact ? 6 : 10)
@@ -245,7 +245,7 @@ struct PaywallView: View {
     }
 
     private var legalText: some View {
-        Text("Одноразова оплата. Без автоматичного поновлення.")
+        Text("One-time payment. No auto-renewal.")
             .font(.system(size: isCompact ? 10 : 11, weight: .regular, design: .rounded))
             .foregroundStyle(.white.opacity(0.8))
             .multilineTextAlignment(.center)

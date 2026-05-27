@@ -1,6 +1,6 @@
 //
 //  HapticManager.swift
-//  Світ Казок
+//  Storyland
 //
 
 import UIKit

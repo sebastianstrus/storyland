@@ -1,6 +1,6 @@
 //
 //  QuestionCard.swift
-//  Світ Казок
+//  Storyland
 //
 
 import SwiftUI
@@ -21,7 +21,7 @@ struct QuestionCard: View {
                     .frame(width: 32, height: 32)
                     .background(AppTheme.secondaryGradient, in: Circle())
 
-                Text("Питання \(questionNumber) з \(totalQuestions)")
+                Text("Question \(questionNumber) of \(totalQuestions)")
                     .font(.appCaption.weight(.bold))
                     .foregroundStyle(.secondary)
                     .textCase(.uppercase)

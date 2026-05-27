@@ -1,6 +1,6 @@
 //
 //  AudioPlayer.swift
-//  Світ Казок
+//  Storyland
 //
 
 import AVFoundation

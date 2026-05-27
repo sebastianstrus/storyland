@@ -1,6 +1,6 @@
 //
 //  StoryRepository.swift
-//  Світ Казок
+//  Storyland
 //
 
 import Foundation
@@ -14,7 +14,7 @@ final class StoryRepository {
     }
 
     private func loadStories() {
-        guard let url = Bundle.main.url(forResource: "stories_ua", withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: "stories_en", withExtension: "json") else {
             assertionFailure("stories_en.json missing from bundle")
             return
         }

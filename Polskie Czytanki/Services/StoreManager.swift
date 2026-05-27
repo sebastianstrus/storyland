@@ -1,6 +1,6 @@
 //
 //  StoreManager.swift
-//  Світ Казок
+//  Storyland
 //
 
 import Foundation
@@ -73,7 +73,7 @@ final class StoreManager {
             }
         }
         if products.isEmpty && lastError == nil {
-            lastError = "Не вдалося завантажити продукт. Перевір з'єднання і спробуй ще раз."
+            lastError = "Could not load product. Check your connection and try again."
         }
     }
 
@@ -84,7 +84,7 @@ final class StoreManager {
         }
         guard let product = premiumProduct else {
             if lastError == nil {
-                lastError = "Продукт недоступний. Спробуй ще раз за мить."
+                lastError = "Product unavailable. Please try again in a moment."
             }
             return false
         }
@@ -102,7 +102,7 @@ final class StoreManager {
             case .userCancelled:
                 return false
             case .pending:
-                lastError = "Покупка очікує на затвердження."
+                lastError = "Purchase is pending approval."
                 return false
             @unknown default:
                 return false

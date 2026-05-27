@@ -8,17 +8,12 @@
       "internalID" : "1001",
       "localizations" : [
         {
-          "description" : "Odblokuj wszystkie 320 czytanek na zawsze.",
-          "displayName" : "Polskie Czytanki Premium",
-          "locale" : "pl_PL"
-        },
-        {
           "description" : "Unlock all 320 stories forever.",
-          "displayName" : "Polskie Czytanki Premium",
+          "displayName" : "Storyland Premium",
           "locale" : "en_US"
         }
       ],
-      "productID" : "com.sebastianstrus.fairytalesua.premium",
+      "productID" : "com.sebastianstrus.fairytales.premium",
       "referenceName" : "Premium Access",
       "type" : "NonConsumable"
     }
@@ -28,8 +23,8 @@
     "_developerTeamID" : "0",
     "_failTransactionsEnabled" : false,
     "_lastSynchronizedDate" : 0,
-    "_locale" : "pl_PL",
-    "_storefront" : "POL",
+    "_locale" : "en_US",
+    "_storefront" : "USA",
     "_storeKitErrors" : [
       {
         "current" : null,

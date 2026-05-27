@@ -1,6 +1,6 @@
 //
 //  ConfettiView.swift
-//  Світ Казок
+//  Storyland
 //
 
 import SwiftUI

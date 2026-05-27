@@ -1,6 +1,6 @@
 //
 //  HomeView.swift
-//  Світ Казок
+//  Storyland
 //
 
 import SwiftUI
@@ -84,7 +84,7 @@ struct HomeView: View {
                     .overlay(Circle().stroke(Color.white.opacity(0.45), lineWidth: 1))
                     .shadow(color: AppTheme.softShadow, radius: 8, y: 4)
             }
-            .accessibilityLabel(Text("Налаштування"))
+            .accessibilityLabel(Text("Settings"))
         }
     }
 
@@ -128,7 +128,7 @@ struct HomeView: View {
             .scaleEffect(titleAppeared ? 1.0 : 0.5)
             .opacity(titleAppeared ? 1.0 : 0)
 
-            Text("Світ Казок")
+            Text("Storyland")
                 .font(.system(size: 46, weight: .heavy, design: .rounded))
                 .foregroundStyle(
                     LinearGradient(
@@ -142,7 +142,7 @@ struct HomeView: View {
                 .scaleEffect(titleAppeared ? 1.0 : 0.85)
                 .opacity(titleAppeared ? 1.0 : 0)
 
-            Text("Відкрий радість читання.")
+            Text("Discover the joy of reading.")
                 .font(.appSubtitle)
                 .foregroundStyle(.white.opacity(0.95))
                 .shadow(color: .black.opacity(0.5), radius: 6, y: 2)
@@ -155,7 +155,7 @@ struct HomeView: View {
     private var actionButtons: some View {
         VStack(spacing: 16) {
             PrimaryButton(
-                "Відкрий казки",
+                "Discover Tales",
                 systemImage: "books.vertical.fill"
             ) {
                 path.append(AppRoute.stories)
@@ -165,7 +165,7 @@ struct HomeView: View {
                 HStack(spacing: 6) {
                     Image(systemName: "star.fill")
                         .foregroundStyle(.yellow)
-                    Text("Завершено: \(progress.completedCount) / \(repository.stories.count)")
+                    Text("Completed: \(progress.completedCount) / \(repository.stories.count)")
                         .font(.appCaption.weight(.bold))
                         .foregroundStyle(.white)
                 }
