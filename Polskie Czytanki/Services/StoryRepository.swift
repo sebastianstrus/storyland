@@ -15,7 +15,7 @@ final class StoryRepository {
 
     private func loadStories() {
         guard let url = Bundle.main.url(forResource: "stories_ua", withExtension: "json") else {
-            assertionFailure("stories_ua.json missing from bundle")
+            assertionFailure("stories_en.json missing from bundle")
             return
         }
         do {
