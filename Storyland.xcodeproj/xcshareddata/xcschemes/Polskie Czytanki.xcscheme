@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7DA752BC2FC5A0DA0052FA2E"
-               BuildableName = "Polskie Czytanki.app"
-               BlueprintName = "Polskie Czytanki"
-               ReferencedContainer = "container:Polskie Czytanki.xcodeproj">
+               BuildableName = "Storyland.app"
+               BlueprintName = "Storyland"
+               ReferencedContainer = "container:Storyland.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7DA752BC2FC5A0DA0052FA2E"
-            BuildableName = "Polskie Czytanki.app"
-            BlueprintName = "Polskie Czytanki"
-            ReferencedContainer = "container:Polskie Czytanki.xcodeproj">
+            BuildableName = "Storyland.app"
+            BlueprintName = "Storyland"
+            ReferencedContainer = "container:Storyland.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7DA752BC2FC5A0DA0052FA2E"
-            BuildableName = "Polskie Czytanki.app"
-            BlueprintName = "Polskie Czytanki"
-            ReferencedContainer = "container:Polskie Czytanki.xcodeproj">
+            BuildableName = "Storyland.app"
+            BlueprintName = "Storyland"
+            ReferencedContainer = "container:Storyland.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

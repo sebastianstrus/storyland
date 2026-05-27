@@ -1,12 +1,12 @@
 //
-//  Polskie_CzytankiApp.swift
+//  StorylandApp.swift
 //  Storyland
 //
 
 import SwiftUI
 
 @main
-struct Polskie_CzytankiApp: App {
+struct StorylandApp: App {
     @State private var repository = StoryRepository()
     @State private var progress = ProgressStore()
     @State private var settings = SettingsStore()
